@@ -7,7 +7,7 @@
     "dev": "npx nodemon",
     "build": "npx tsc --skipLibCheck",
     "start": "npx tsc --skipLibCheck && node ./dist/server.js",
-    "protoc": "node ./scripts/protoc.js"
+    "protoc": "./scripts/protoc.sh"
   },
   "keywords": [],
   "author": "",
