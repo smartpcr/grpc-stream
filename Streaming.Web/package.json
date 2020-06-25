@@ -1,12 +1,30 @@
 {
-  "name": "Streaming.Web",
+  "name": "streaming-web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx nodemon",
+    "build": "npx tsc --skipLibCheck",
+    "start": "npx tsc --skipLibCheck && node ./dist/server.js",
+    "protoc": "node ./scripts/protoc.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "google-protobuf": "^3.12.2",
+    "grpc": "^1.24.3"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/google-protobuf": "^3.7.2",
+    "@types/node": "^14.0.14",
+    "grpc-tools": "^1.9.0",
+    "grpc_tools_node_protoc_ts": "^4.0.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
 }
