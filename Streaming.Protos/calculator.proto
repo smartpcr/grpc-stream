@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Streaming.Models";
+package streaming;
+
+service Calculator {
+  rpc Add(AddRequest) returns (CalcResponse);
+}
+
+message AddRequest {
+  int32 num1 = 1;
+  int32 num2 = 2;
+}
+
+message CalcResponse {
+  int32 result = 1;
+}
