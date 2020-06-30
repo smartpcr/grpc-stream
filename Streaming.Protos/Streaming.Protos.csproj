@@ -9,6 +9,10 @@
     <PackageReference Include="Grpc.AspNetCore" Version="2.29.0" />
     <PackageReference Include="Grpc.Tools" Version="2.29.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="*.proto" OutputDir="%(RelativePath)Models/" />
+  </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.Auth\Common.Auth.csproj" />

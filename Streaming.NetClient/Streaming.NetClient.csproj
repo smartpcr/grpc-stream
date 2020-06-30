@@ -6,13 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="../Streaming.Protos/*.proto" OutputDir="%(RelativePath)Models/" />
-    <Protobuf Update="calculator.proto">
-      <OutputDir>%(RelativePath)Models/</OutputDir>
-    </Protobuf>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Grpc" Version="2.29.0" />
     <PackageReference Include="Grpc.Tools" Version="2.29.0" />
   </ItemGroup>
@@ -37,10 +30,6 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models" />
   </ItemGroup>
 
 </Project>

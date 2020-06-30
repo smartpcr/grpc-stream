@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="../Streaming.Protos/*.proto" OutputDir="%(RelativePath)Models/" />
-    <Protobuf Update="calculator.proto">
-      <OutputDir>%(RelativePath)Models/</OutputDir>
-    </Protobuf>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Grpc" Version="2.29.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.29.0" />
     <PackageReference Include="Grpc.Tools" Version="2.29.0" />
@@ -23,10 +16,6 @@
     <ProjectReference Include="..\Common\Common.KeyVault\Common.KeyVault.csproj" />
     <ProjectReference Include="..\Common\Common.Telemetry\Common.Telemetry.csproj" />
     <ProjectReference Include="..\Streaming.Protos\Streaming.Protos.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models" />
   </ItemGroup>
 
 </Project>
