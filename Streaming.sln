@@ -1,29 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming.Protos", "Streaming.Protos\Streaming.Protos.csproj", "{AD6CBC8F-109B-4D52-96F5-D6738EC3D649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Streaming.Protos", "Streaming.Protos\Streaming.Protos.csproj", "{AD6CBC8F-109B-4D52-96F5-D6738EC3D649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming.Server", "Streaming.Server\Streaming.Server.csproj", "{E009D8E6-13E7-4FA7-8B5E-793F2E71C6AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Streaming.Server", "Streaming.Server\Streaming.Server.csproj", "{E009D8E6-13E7-4FA7-8B5E-793F2E71C6AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming.NetClient", "Streaming.NetClient\Streaming.NetClient.csproj", "{9C523E4A-8684-4A2E-A807-8F84EB6A2B60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Streaming.NetClient", "Streaming.NetClient\Streaming.NetClient.csproj", "{9C523E4A-8684-4A2E-A807-8F84EB6A2B60}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{FAA85438-53BB-4878-93A6-91800EE53796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Config", "Common\Common.Config\Common.Config.csproj", "{E7428B2F-41CE-4D77-B595-32D6C86936A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Config", "Common\Common.Config\Common.Config.csproj", "{E7428B2F-41CE-4D77-B595-32D6C86936A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Auth", "Common\Common.Auth\Common.Auth.csproj", "{8B0BAF59-8E38-4709-B19A-6C96FA110EC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Auth", "Common\Common.Auth\Common.Auth.csproj", "{8B0BAF59-8E38-4709-B19A-6C96FA110EC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Telemetry", "Common\Common.Telemetry\Common.Telemetry.csproj", "{C92FBE06-E1D1-4621-BC5C-8AF385B18768}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Telemetry", "Common\Common.Telemetry\Common.Telemetry.csproj", "{C92FBE06-E1D1-4621-BC5C-8AF385B18768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.KeyVault", "Common\Common.KeyVault\Common.KeyVault.csproj", "{9D6886C8-87BC-4120-A35F-BC44BB4A2476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.KeyVault", "Common\Common.KeyVault\Common.KeyVault.csproj", "{9D6886C8-87BC-4120-A35F-BC44BB4A2476}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C1DBAEAC-FDB2-41A2-B811-79E87DEA75C9}"
-ProjectSection(SolutionItems) = preProject
-	Scripts\generate-certs.sh = Scripts\generate-certs.sh
-	Scripts\readme.md = Scripts\readme.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		Scripts\generate-certs.sh = Scripts\generate-certs.sh
+		Scripts\readme.md = Scripts\readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AD6CBC8F-109B-4D52-96F5-D6738EC3D649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -123,10 +120,16 @@ Global
 		{9D6886C8-87BC-4120-A35F-BC44BB4A2476}.Release|x86.ActiveCfg = Release|Any CPU
 		{9D6886C8-87BC-4120-A35F-BC44BB4A2476}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E7428B2F-41CE-4D77-B595-32D6C86936A1} = {FAA85438-53BB-4878-93A6-91800EE53796}
 		{8B0BAF59-8E38-4709-B19A-6C96FA110EC4} = {FAA85438-53BB-4878-93A6-91800EE53796}
 		{C92FBE06-E1D1-4621-BC5C-8AF385B18768} = {FAA85438-53BB-4878-93A6-91800EE53796}
 		{9D6886C8-87BC-4120-A35F-BC44BB4A2476} = {FAA85438-53BB-4878-93A6-91800EE53796}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D992A46-6DCC-4B36-A11D-887DC83056D1}
 	EndGlobalSection
 EndGlobal
