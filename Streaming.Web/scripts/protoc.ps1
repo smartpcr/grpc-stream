@@ -11,25 +11,18 @@ $grpcProtoc = Join-Path $nodeBinFolder "grpc_tools_node_protoc"
 $grpcPlugin = Join-Path $nodeBinFolder "grpc_tools_node_protoc_plugin"
 $grpcTs = Join-Path $nodeBinFolder "protoc-gen-ts"
 
-$protoFiles = [System.IO.Directory]::GetFiles($protoFolder, "*.proto", [System.IO.SearchOption]::AllDirectories)
+$protocArgs = "$grpcProtoc --js_out=import_style=commonjs,binary:`"$protoFolder`" " +
+"--grpc_out=`"$protoFolder`" " +
+"--plugin=protoc-gen-grpc=`"$grpcPlugin`" " +
+"-I `"$protoFolder`" " +
+"`"$protoFolder/*.proto`""
+Write-Host $protocArgs
+Invoke-Expression $protocArgs
 
-$protoFiles | ForEach-Object {
-  $protoFile = $_
-  Write-Host "processing $protoFile..."
-
-  $protocArgs = "$grpcProtoc --js_out=import_style=commonjs,binary:`"$protoFile`" " +
-    "--grpc_out=`"$protoFile`" " +
-    "--plugin=protoc-gen-grpc=`"$grpcPlugin`" " +
-    "-I `"$protoFile`" " +
-    "`"$protoFile`"/*.proto"
-  Write-Host $protocArgs
-  Invoke-Expression $protocArgs
-
-  $protocArgs = "$grpcProtoc " +
-    "--plugin=protoc-gen-ts=`"$grpcTs`" " +
-    "--ts_out=`"$protoFile`" " +
-    "-I `"$protoFile`" " +
-    "`"$protoFile`"/*.proto"
-  Write-Host $protocArgs
-  Invoke-Expression $protocArgs
-}
+$protocArgs = "$grpcProtoc " +
+"--plugin=protoc-gen-ts=`"$grpcTs`" " +
+"--ts_out=`"$protoFolder`" " +
+"-I `"$protoFolder`" " +
+"`"$protoFolder/*.proto`""
+Write-Host $protocArgs
+Invoke-Expression $protocArgs
