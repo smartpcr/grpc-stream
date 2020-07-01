@@ -1,15 +1,12 @@
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-$rootFolder = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }
-while (-not (Test-Path (Join-Path $rootFolder "package.json"))) {
-    $rootFolder = Split-Path $rootFolder -Parent
-}
-$protoFolder = Join-Path (Join-Path $rootFolder "src") "proto"
-$nodeBinFolder = Join-Path (Join-Path $rootFolder "node_modules") ".bin"
+$protoFolder = "./src/proto/greeter"
+$nodeBinFolder = Join-Path "./node_modules" ".bin"
 $grpcProtoc = Join-Path $nodeBinFolder "grpc_tools_node_protoc"
 $grpcPlugin = Join-Path $nodeBinFolder "grpc_tools_node_protoc_plugin"
 $grpcTs = Join-Path $nodeBinFolder "protoc-gen-ts"
+
 
 $protocArgs = "$grpcProtoc --js_out=import_style=commonjs,binary:`"$protoFolder`" " +
 "--grpc_out=`"$protoFolder`" " +
