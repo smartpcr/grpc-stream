@@ -14,6 +14,8 @@ for f in ./src/proto/*; do
       continue
   fi
 
+  echo ""${f}"/*.proto"
+
   # JavaScript code generating
   ${GRPC_TOOLS_NODE_PROTOC} \
       --js_out=import_style=commonjs,binary:"${f}" \
