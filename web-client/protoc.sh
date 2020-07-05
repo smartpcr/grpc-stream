@@ -15,7 +15,7 @@ ${GRPC_TOOLS_NODE_PROTOC} \
   "${PROTO_FOLDER}"/*.proto
 ${GRPC_TOOLS_NODE_PROTOC} \
   --plugin=protoc-gen-ts="${PROTOC_GEN_TS_PATH}" \
-  --ts_out=service=true:"${PROTO_FOLDER}" \
+  --ts_out=service=grpc-web:"${PROTO_FOLDER}" \
   -I "${PROTO_FOLDER}" \
   "${PROTO_FOLDER}"/*.proto
 
@@ -29,6 +29,6 @@ ${GRPC_TOOLS_NODE_PROTOC} \
   "${PROTO_FOLDER}"/*.proto
 ${GRPC_TOOLS_NODE_PROTOC} \
   --plugin=protoc-gen-ts="${PROTOC_GEN_TS_PATH}" \
-  --ts_out=service=true:"${PROTO_FOLDER}" \
+  --ts_out=service=grpc-web:"${PROTO_FOLDER}" \
   -I "${PROTO_FOLDER}" \
   "${PROTO_FOLDER}"/*.proto
