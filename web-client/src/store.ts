@@ -1,18 +1,21 @@
-import { createStoreHook } from "react-redux";
+import { StoryState } from "./story/StoryDataStore";
+import { combineReducers, applyMiddleware, createStore } from "redux";
+import storyReducer from "./story/StoryReducer";
+import { newGrpcMiddleware } from "./middleware/grpc";
 
-interface IStoreEnhancerState {
-}
+// tslint:disable-next-line: no-empty-interface
+interface StoreEnhancerState {}
 
-export interface RootState extends IStoreEnhancerState {
+export interface RootState extends StoreEnhancerState {
     stories: StoryState;
 }
 
 const reducers = combineReducers<RootState>({
-    stories
+    stories: storyReducer
 });
 
-export default createStoreHook(
-    reducer,
+export default createStore(
+    reducers,
     applyMiddleware(
         newGrpcMiddleware()
     )

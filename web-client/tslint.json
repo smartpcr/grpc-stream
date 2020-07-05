@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-react"],
+  "extends": ["tslint:latest", "tslint-react"],
   "linterOptions": {
     "exclude": ["src/proto/*"]
   },
@@ -62,7 +62,8 @@
       "check-open-brace",
       "check-whitespace"
     ],
-    "quotemark": [true, "single", "jsx-double"],
+    "quotemark": [true, "double"],
+    "no-submodule-imports": false,
     "radix": true,
     "semicolon": [true, "always"],
     "switch-default": true,

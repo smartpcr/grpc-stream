@@ -6,12 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/semantic-ui": "^2.2.7",
     "google-protobuf": "^3.12.2",
     "grpc-web-client": "^0.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "semantic-ui-react": "^0.88.2",
     "typesafe-actions": "^5.1.0",
     "typescript": "^3.7.5"
   },
@@ -44,6 +47,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "grpc-tools": "^1.9.0",
-    "ts-protoc-gen": "^0.12.0"
+    "ts-protoc-gen": "^0.12.0",
+    "tslint-react": "^5.0.0"
   }
 }
