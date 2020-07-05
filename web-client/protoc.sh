@@ -12,12 +12,12 @@ ${GRPC_TOOLS_NODE_PROTOC} \
   --grpc_out="${PROTO_FOLDER}" \
   --plugin=protoc-gen-grpc="${GRPC_TOOLS_NODE_PROTOC_PLUGIN}" \
   -I "${PROTO_FOLDER}" \
-  "${PROTO_FOLDER}"/story.proto
+  "${PROTO_FOLDER}"/*.proto
 ${GRPC_TOOLS_NODE_PROTOC} \
   --plugin=protoc-gen-ts="${PROTOC_GEN_TS_PATH}" \
   --ts_out=service=true:"${PROTO_FOLDER}" \
   -I "${PROTO_FOLDER}" \
-  "${PROTO_FOLDER}"/story.proto
+  "${PROTO_FOLDER}"/*.proto
 
 
 PROTO_FOLDER="./src/proto/telemetry"
@@ -26,9 +26,9 @@ ${GRPC_TOOLS_NODE_PROTOC} \
   --grpc_out="${PROTO_FOLDER}" \
   --plugin=protoc-gen-grpc="${GRPC_TOOLS_NODE_PROTOC_PLUGIN}" \
   -I "${PROTO_FOLDER}" \
-  "${PROTO_FOLDER}"/story.proto
+  "${PROTO_FOLDER}"/*.proto
 ${GRPC_TOOLS_NODE_PROTOC} \
   --plugin=protoc-gen-ts="${PROTOC_GEN_TS_PATH}" \
   --ts_out=service=true:"${PROTO_FOLDER}" \
   -I "${PROTO_FOLDER}" \
-  "${PROTO_FOLDER}"/story.proto
+  "${PROTO_FOLDER}"/*.proto
