@@ -6,6 +6,7 @@ import { RootState } from "../Store";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import StoryList from "./StoryList";
+import StoryView from "./StoryView";
 
 export interface IStoriesProps {
     stories: Story[];
@@ -29,10 +30,14 @@ class Stories extends React.Component<IStoriesProps> {
                 <h3>News with gRPC-Web</h3>
                 <Row>
                     <Col lg={4}>
-                        <StoryList/>
+                        <StoryList
+                            selected={this.props.selected}
+                            stories={this.props.stories}
+                            onStorySelect={this.props.selectStory}
+                        />
                     </Col>
                     <Col lg={8}>
-                        {this.props.selected && <StoryView/>}
+                        {this.props.selected && <StoryView story={this.props.selected}/>}
                     </Col>
                 </Row>
             </Container>
