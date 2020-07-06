@@ -1,4 +1,4 @@
-// package: streaming
+// package: streaming.grpc
 // file: greeter.proto
 
 /* tslint:disable */
@@ -15,7 +15,7 @@ interface IGreeterService extends grpc.ServiceDefinition<grpc.UntypedServiceImpl
 }
 
 interface IGreeterService_IGreet extends grpc.MethodDefinition<greeter_pb.GreetingRequest, greeter_pb.GreetingResponse> {
-    path: string; // "/streaming.Greeter/Greet"
+    path: string; // "/streaming.grpc.Greeter/Greet"
     requestStream: boolean; // false
     responseStream: boolean; // false
     requestSerialize: grpc.serialize<greeter_pb.GreetingRequest>;
@@ -24,7 +24,7 @@ interface IGreeterService_IGreet extends grpc.MethodDefinition<greeter_pb.Greeti
     responseDeserialize: grpc.deserialize<greeter_pb.GreetingResponse>;
 }
 interface IGreeterService_IGreetManyTimes extends grpc.MethodDefinition<greeter_pb.GreetManyTimesRequest, greeter_pb.GreetManyTimesResponse> {
-    path: string; // "/streaming.Greeter/GreetManyTimes"
+    path: string; // "/streaming.grpc.Greeter/GreetManyTimes"
     requestStream: boolean; // false
     responseStream: boolean; // true
     requestSerialize: grpc.serialize<greeter_pb.GreetManyTimesRequest>;
@@ -33,7 +33,7 @@ interface IGreeterService_IGreetManyTimes extends grpc.MethodDefinition<greeter_
     responseDeserialize: grpc.deserialize<greeter_pb.GreetManyTimesResponse>;
 }
 interface IGreeterService_ILongGreet extends grpc.MethodDefinition<greeter_pb.LongGreetRequest, greeter_pb.LongGreetResponse> {
-    path: string; // "/streaming.Greeter/LongGreet"
+    path: string; // "/streaming.grpc.Greeter/LongGreet"
     requestStream: boolean; // true
     responseStream: boolean; // false
     requestSerialize: grpc.serialize<greeter_pb.LongGreetRequest>;
@@ -42,7 +42,7 @@ interface IGreeterService_ILongGreet extends grpc.MethodDefinition<greeter_pb.Lo
     responseDeserialize: grpc.deserialize<greeter_pb.LongGreetResponse>;
 }
 interface IGreeterService_IGreetEveryone extends grpc.MethodDefinition<greeter_pb.GreetEveryoneRequest, greeter_pb.GreetEveryoneResponse> {
-    path: string; // "/streaming.Greeter/GreetEveryone"
+    path: string; // "/streaming.grpc.Greeter/GreetEveryone"
     requestStream: boolean; // true
     responseStream: boolean; // true
     requestSerialize: grpc.serialize<greeter_pb.GreetEveryoneRequest>;

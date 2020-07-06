@@ -1,4 +1,4 @@
-// package: streaming
+// package: streaming.grpc
 // file: greeter.proto
 
 /* tslint:disable */
