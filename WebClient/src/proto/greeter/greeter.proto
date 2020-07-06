@@ -1,5 +1,5 @@
 syntax = "proto3";
-package streaming;
+package streaming.grpc;
 
 service Greeter {
   // Unary
