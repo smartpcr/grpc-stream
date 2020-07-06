@@ -6,7 +6,7 @@ import { Code } from "grpc-web-client/dist/typings/Code";
 import { Metadata } from "grpc-web-client/dist/typings/metadata";
 import { News } from "../proto/story/story_pb_service";
 
-export function listStories() {
+export function fetchStories() {
     return async (dispatch: Dispatch) => {
         try {
             grpcRequest<ListStoriesRequest, ListStoriesResponse>({

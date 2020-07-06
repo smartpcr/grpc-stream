@@ -2,6 +2,7 @@ import { StoryState } from "./story/StoryDataStore";
 import { combineReducers, applyMiddleware, createStore } from "redux";
 import storyReducer from "./story/StoryReducer";
 import { newGrpcMiddleware } from "./middleware/grpc";
+import { StoryActionTypes } from "./story/StoryActionTypes";
 
 // tslint:disable-next-line: no-empty-interface
 interface StoreEnhancerState {}
@@ -20,3 +21,6 @@ export default createStore(
         newGrpcMiddleware()
     )
 );
+
+export type RootAction =
+    | StoryActionTypes;
